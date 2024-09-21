@@ -1,12 +1,12 @@
 <br>
 
 [Youtube Tutorial]()<br>
-[Downloads](#-downloads)<br>
-[Setup](#-setup)<br>
-[How to use](#-how-to-use)<br>
-[Documentation](#-documentation)<br>
-[Examples](#-examples)<br>
-[Subtitles](#-subtitles)<br>
+[Downloads](#downloads)<br>
+[Setup](#setup)<br>
+[How to use](#how-to-use-)<br>
+[Documentation](#documentation)<br>
+[Examples](#examples)<br>
+[Subtitles](#subtitles)<br>
 
 ## Installation Guide 📖
 
@@ -188,20 +188,4 @@ The code for Subtitles is quite experimental and will likely break, it's honestl
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><br><br><br><br><br><br>
