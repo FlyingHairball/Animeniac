@@ -1,0 +1,92 @@
+Usage: python func.py [options]...
+
+-h --help                   show this help message and exit
+
+-i --input                  Specify the input file/directory, Default: inputs
+
+-o --output                 Specify the output directory, Default: results
+
+-s --outscale               The final upsampling scale of the image, Default: 2
+
+-n --model_name             Model names: realesr-animevideov3 | RealESRGAN_x4plus_anime_6B | RealESRGAN_x4plus |
+                            RealESRNet_x4plus | RealESRGAN_x2plus | realesr-general-x4v3Default:realesr-animevideov3
+
+-sf --suffix                Suffix added to end of the output file, Default: 4k
+
+-dm --dont_move             Stops the file from moving to the done folder, Useful if you are planning to process the same
+                            file multiple times, or if you just dont like this behaviour
+
+-da --disable_audio         Do not include audio stream in result
+
+-ds --disable_subtitles     Do not include subtitle stream in result
+
+==========================================================================================================================
+
+
+# open directory, activate environment and run script
+
+cd {path to your real-esrgan folder}
+conda activate real
+python func.py
+
+
+
+# if you want to process specific files, or apply specific settings for each file then you can add
+# a line with customization for each file like the example below, then copy and paste it into anaconda
+
+python func.py -i inputs/myvideofile1.mp4 -n RealESRGAN_x4plus
+python func.py -i inputs/myvideofile2.mp4 -o result_videos
+python func.py -i inputs/myvideofile3.mp4 --suffix 4k
+python func.py -i inputs/myvideofile4.mp4 -s 4
+python func.py -i inputs/myvideofile5.mp4
+
+
+
+
+# specify custom input or output 
+python func.py -i A:/real/inputs/video
+python func.py -i inputs/myVideo.mp4
+python func.py -i inputs/myVideo.mp4 -o my_results
+
+
+# specify custom scale x4
+python func.py -s 4
+
+# specify custom model
+python func.py -n RealESRNet_x4plus
+
+# specify custom suffix
+python func.py -sf 4k_result
+
+# stop file moving location after process is done
+python func.py -dm
+
+# do not include audio track in result
+python func.py -da
+
+# do not include subtitle track in result
+python func.py -ds
+
+
+
+
+// func.py is just a helper tool to make the process easier and more accessible, if you wish for more
+// control then you can make lines that call the inference files directly:
+
+python inference_realesrgan_video_fast.py -n realesr-animevideov3 -i inputs/myvideo.mp4 -o results -s 2 --link --suffix fast_4k
+python inference_realesrgan_video.py -n realesr-animevideov3 -i inputs/myvideo.mp4 -o results -s 3 --suffix default_4k
+
+
+
+
+# ffmpeg
+
+# crop video
+ffmpeg -ss 00:06:36.34 -i i.mp4 -t 00:00:18.00 -c:v copy -c:a copy -c:s copy o.mp4
+
+# copy, convert and map multiple audio tracks or subtitle tracks with -map 0:s:0
+# ffmpeg -i i.mkv -map 0:v -c:v libx264 -preset faster -map 0:a:0 -c:a aac -map 0:a:1 -c:a aac o.mp4
+
+
+
+
