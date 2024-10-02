@@ -34,19 +34,19 @@ with open('batch.bat', 'w') as f:
                 continue
             # handle images
             elif mimetypes.guess_type(path)[0].startswith('image'):
-                f.write(f'python inference_realesrgan.py -n {args.model_name} -i {path} -o {args.output} -s {args.outscale} --suffix {args.suffix}\n')
+                f.write(f'python inference_realesrgan.py -n {args.model_name} -i "{path}" -o "{args.output}" -s {args.outscale} --suffix {args.suffix}\n')
                 if not args.dont_move:
                     f.write(f'move {path} {args.input}\done\n')
             # handle video
             elif mimetypes.guess_type(path)[0].startswith('video'):
-                f.write(f'python inference_realesrgan_video_fast.py -n {args.model_name} -i {path} -o {args.output} -s {args.outscale} --link --suffix {args.suffix} {"--disable_audio" if args.disable_audio else ""} {"--disable_subtitles" if args.disable_subtitles else ""}\n')
+                f.write(f'python inference_realesrgan_video_fast.py -n {args.model_name} -i "{path}" -o "{args.output}" -s {args.outscale} --link --suffix {args.suffix} {"--disable_audio" if args.disable_audio else ""} {"--disable_subtitles" if args.disable_subtitles else ""}\n')
                 if not args.dont_move:
                     f.write(f'move {path} {args.input}\done\n')
 
     # handle single file input
     else:
         output_dir = os.path.normpath(os.path.dirname(args.input))
-        f.write(f'python inference_realesrgan_video_fast.py -n {args.model_name} -i {args.input} -o {args.output} -s {args.outscale} --link --suffix {args.suffix}\n')
+        f.write(f'python inference_realesrgan_video_fast.py -n {args.model_name} -i "{args.input}" -o "{args.output}" -s {args.outscale} --link --suffix {args.suffix}\n')
         f.write(f'mkdir {output_dir}\done\n')
         if not args.dont_move:
             f.write(f'move {os.path.normpath(args.input)} {output_dir}\done\n')
