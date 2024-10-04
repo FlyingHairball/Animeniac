@@ -13,11 +13,11 @@
 
 #### Downloads
 
-Clone/download [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN.git)<br>
-
 Download and install [Anaconda](https://www.anaconda.com/download/success)<br>
 
-Make sure to download [Full Version](https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z) of ffmpeg<br>
+Clone/download [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN.git)<br>
+
+Make sure to download **Full Version** of [ffmpeg](https://ffmpeg.org/download.html)<br>
 
 (Optional): Add ffmpeg to Path Environment, Useful for manipulating video files
 
