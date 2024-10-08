@@ -7,6 +7,17 @@
 [Examples](#examples)<br>
 [Subtitles](#subtitles)<br>
 
+# About
+
+This is a simple guide to installing and using [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN.git) with a few code enhancements that provide speed, fixes and quality of life improvements.
+
+Real-ESRGAN is an Image and Video upscaling tool that improves the image quality.
+
+![ex3](https://github.com/user-attachments/assets/8227a924-5751-4b57-b3f4-b3af9dd96a40)
+
+![ex2](https://github.com/user-attachments/assets/6864fba3-49fa-43dd-8d81-8de6d14d22db)
+
+
 ## Installation Guide 📖
 
 [Youtube Tutorial](https://youtu.be/IY63BukAk-g)
