@@ -1,6 +1,5 @@
 <br>
 
-[Youtube Tutorial]()<br>
 [Downloads](#downloads)<br>
 [Setup](#setup)<br>
 [How to use](#how-to-use-)<br>
@@ -10,6 +9,7 @@
 
 ## Installation Guide 📖
 
+[Youtube Tutorial](https://youtu.be/IY63BukAk-g)
 
 #### Downloads
 
